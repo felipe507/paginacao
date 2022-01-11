@@ -37,35 +37,22 @@
                             <th class="text-center" scope="col">E-mail</th>
                         </thead>
                         <tbody class="text-center">
+                            @foreach ($clientes as $cliente )
                             <tr>
-                                <td>1</td>
-                                <td>João</td>
-                                <td>Silva</td>
-                                <td>joao@gmail.com</td>
+                                <td>{{ $cliente->id }}</td>
+                                <td>{{ $cliente->nome }}</td>
+                                <td>{{ $cliente->sobrenome }}</td>
+                                <td>{{ $cliente->email }}</td>
                             </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>João</td>
-                                <td>Silva</td>
-                                <td>joao@gmail.com</td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>João</td>
-                                <td>Silva</td>
-                                <td>joao@gmail.com</td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>João</td>
-                                <td>Silva</td>
-                                <td>joao@gmail.com</td>
-                            </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
                 <div class="card-footer">
-                    Pagina 1 de 10
+                    {{ $clientes->links() }}
+                    {{  $clientes->onEachSide(10)->links()  }}
+                    {{ $clientes->hasPages() }}
+
                 </div>
             </div>
         </div>
