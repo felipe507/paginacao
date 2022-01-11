@@ -15,3 +15,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/',[ClientesController::class,'index'])->name('home');
+Route::get('/clientes',[ClientesController::class,'idexjs'])->name('clientes');

@@ -28,7 +28,7 @@
                    <h1> Tabelas de clientes </h1>
                 </div>
                 <div class="card-body">
-                    <h5>Exibindo 10 de 10000 clientes {  {{ $clientes->currentPage() }} a {{ $clientes->lastPage() }}}</h5>
+                    <h5>Exibindo {{ $clientes->count() }} de {{ $clientes->total() }} clientes {  {{ $clientes->firstItem() }} a {{ $clientes->lastItem() }}}</h5>
                     <table class="table table-hover text-center">
                         <thead >
                             <th class="text-center" scope="col">ID</th>
