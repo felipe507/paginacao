@@ -19,6 +19,17 @@ class ClientesController extends Controller
         return view('teste', compact('clientes'));
     }
 
+    public function indexjs()
+    {
+        return view('clientesjs');
+    }
+
+    public function indexjson()
+    {
+        return Cliente::paginate(10);
+    }
+
+
     /**
      * Show the form for creating a new resource.
      *
