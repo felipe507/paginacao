@@ -93,6 +93,7 @@
         $("#paginationNav>ul").append(
             getPreviousItem(data)
         );
+        //todas as paginas
         // for (i=1;i<=data.last_page;i++) {
         //     $("#paginationNav>ul").append(
         //         getItem(data,i)
